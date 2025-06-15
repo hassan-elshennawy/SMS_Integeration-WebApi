@@ -26,7 +26,7 @@ namespace SMS.DataService
                     return false.ToString().ToLower();
                 }
                 SMSResponse smsResponse = SendMessage(mobileNumber, message);
-                if (smsResponse != null)
+                if (smsResponse != null && smsResponse.SMS.bStatus == "Success" && smsResponse.SMS.bError == "NO ERROR")
                 {
                     LoggerHelper.WriteToLogFile(ActionTypeEnum.Information, MethodBase.GetCurrentMethod().Name, $"Message Send Success to Number {mobileNumber} and Message {message} ");
                     return true.ToString().ToLower();

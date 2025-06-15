@@ -1,0 +1,37 @@
+Good afternoon,
+
+ 
+
+Please see the below details for the SMS API demo account with details to implement:
+
+ 
+
+URL: https://globalsms.edsfze.com:1010/
+
+ 
+
+User Name: EDSSMSDemo
+
+ 
+
+Password: Demo@123
+
+ 
+
+Sender id: AD-EDS
+ 
+API ID: rQzTr0bq
+
+ 
+
+ 
+ 
+API Sample URL:
+ 
+https://globalsms.edsfze.com:1010/API//SendSMS?username=EDSSMSDemo&apiId=rQzTr0bq&json=True&destination=971509764561&source=AD-EDS&text=Testingedsoptout.ae
+
+ 
+
+ 
+
+Please let us know if it can be implemented with your system as per your requirement.

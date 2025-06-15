@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9CC4C8A-D69A-41CA-9D5F-498F1AEE98D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SMS.DataService</RootNamespace>
+    <AssemblyName>SMS.DataService</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="aliyun-net-sdk-core, Version=1.5.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\aliyun-net-sdk-core.1.5.11\lib\net45\aliyun-net-sdk-core.dll</HintPath>
+    </Reference>
+    <Reference Include="aliyun-net-sdk-ecs, Version=4.24.12.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\aliyun-net-sdk-ecs.4.24.12\lib\net45\aliyun-net-sdk-ecs.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adafsa.cs" />
+    <Compile Include="AlibabaDSL.cs" />
+    <Compile Include="BrcitcoDSL.cs" />
+    <Compile Include="AptivadigiDSL.cs" />
+    <Compile Include="CommunityAdsDSL.cs" />
+    <Compile Include="EbulkDSL.cs" />
+    <Compile Include="ElitbuzzDSL.cs" />
+    <Compile Include="GlobalSmsDSL.cs" />
+    <Compile Include="GlobalSMS_EDS_UAEDSL.cs" />
+    <Compile Include="MersalSMSDSL.cs" />
+    <Compile Include="MIMDSL.cs" />
+    <Compile Include="MoraDSL.cs" />
+    <Compile Include="MoraV2DSL.cs" />
+    <Compile Include="MshastraDSL.cs" />
+    <Compile Include="NdmSolutions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AsiaCellDSL.cs" />
+    <Compile Include="RouteMobileDSL.cs" />
+    <Compile Include="SinchDSL.cs" />
+    <Compile Include="SLTsrilankaDSL.cs" />
+    <Compile Include="SmartMessagingEtisalatDSL.cs" />
+    <Compile Include="SmsDeliverSmartDSL.cs" />
+    <Compile Include="SMSMisrDSL.cs" />
+    <Compile Include="SMSMisrV2DSL.cs" />
+    <Compile Include="VictoryLinkDSL.cs" />
+    <Compile Include="VictoryLinkV2DSL.cs" />
+    <Compile Include="VodafoneSMSDSL.cs" />
+    <Compile Include="SmartSmsGateway.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SMS.DataAccess\SMS.DataAccess.csproj">
+      <Project>{7af51352-27d1-4a86-bd6b-798152c70a7d}</Project>
+      <Name>SMS.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMS.Entities\SMS.Entities.csproj">
+      <Project>{0dd93ad6-32db-4c57-ad74-6cbf60ffda73}</Project>
+      <Name>SMS.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMS.Enums\SMS.Enums.csproj">
+      <Project>{10fa238c-312f-4fb6-8ee6-bf112be97b81}</Project>
+      <Name>SMS.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMS.Helper\SMS.Helper.csproj">
+      <Project>{2a6bbdb5-76fa-4dc0-8010-454f55e20d2b}</Project>
+      <Name>SMS.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMS.IDataService\SMS.IDataService.csproj">
+      <Project>{b245580f-19c6-4afd-ba83-710eb802bc03}</Project>
+      <Name>SMS.IDataService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
